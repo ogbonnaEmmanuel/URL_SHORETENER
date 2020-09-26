@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#nav_head{
+    background-image: linear-gradient(#e8505a,#2b2d42);
+}
+#centered_tab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#tab{
+    background-color: #ffffff;
+    margin-bottom: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.center{
+    display: flex;
+   justify-content: center;
+}
+#tab_logo_size{
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#img_element{
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#icon_settings{
+    font-size: 30px;
+}
+#setting_text{
+    font-family: 'Lato', sans-serif;
+    margin-top: 3px;
+    font-weight: bolder;
+}
+#center_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#default_img{
+    width: 100px;
+}
+#img_container{
+    background-color: #eeeeee;
+    padding: 50px 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-top: -50px;
+    z-index: 2;
+}
+#form_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#form_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    background-color: hotpink;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: -50px;
+}
+.form_input{
+    width: 350px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 2px solid #eeeeee;
+    outline: none;
+    transition: border 650ms;
+    -webkit-transition: border 650ms;
+    -moz-transition: border 650ms;
+    -ms-transition: border 650ms;
+    -o-transition: border 650ms;
+}
+.form_input:focus{
+    border: 2px solid green;
+}

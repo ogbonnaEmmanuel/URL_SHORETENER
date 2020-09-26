@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ form.non_field_errors }}
+<form method="post">
+    {% csrf_token %}
+
+    {% for field in form %}
+        <div class="fieldWrapper">
+            {{ field.errors }}
+        </div>
+    {% endfor %}
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit">
+</form>
+</body>
+</html>
