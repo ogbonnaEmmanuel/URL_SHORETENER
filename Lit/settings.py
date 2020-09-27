@@ -57,7 +57,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'HomePage/templates/HomePage/index/build'),
                  os.path.join(BASE_DIR, 'ProfilePage/templates/ProfilePage/index/build'),
-                 os.path.join(BASE_DIR, 'HomePage/templates/HomePage')
+                 os.path.join(BASE_DIR, 'HomePage/templates/HomePage'),
+                 os.path.join(BASE_DIR, 'ProfilePage/templates/ProfilePage'),
                  ]
         ,
         'APP_DIRS': True,
@@ -127,7 +128,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'HomePage/templates/HomePage/index/build/static'),
-    os.path.join(BASE_DIR, 'ProfilePage/templates/ProfilePage/index/build/static')
+    os.path.join(BASE_DIR, 'HomePage/static/HomePage/'),
+    os.path.join(BASE_DIR, 'ProfilePage/templates/ProfilePage/index/build/static'),
+    os.path.join(BASE_DIR, 'ProfilePage/static/ProfilePage/'),
 ]
 LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'sign_in'

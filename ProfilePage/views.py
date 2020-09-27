@@ -1,8 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.contrib.auth import update_session_auth_hash
+from django.shortcuts import render,redirect
 
 from HomePage.models import Link
+from .forms import ProfileUpdateForm
 
 
 # Create your views here.
@@ -42,3 +44,17 @@ def get_all_user_data(request):
         }
     })
     return response
+
+
+@login_required
+def settings(request):
+    if request.method == 'POST':
+        form = ProfileUpdateForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, request.user)
+            return redirect('profile')
+    else:
+        form = ProfileUpdateForm(instance=request.user)
+
+    return render(request, 'settings.html', {'form': form})
