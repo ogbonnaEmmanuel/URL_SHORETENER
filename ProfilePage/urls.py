@@ -6,5 +6,5 @@ urlpatterns = [
     path('', views.profile, name='profile'),
     path('user_links_info/', views.get_all_user_data, name='link_info'),
     path('settings/', views.settings, name='settings'),
-    path('create_link/', views.create_link, name='create_link')
+    path('create_link/', views.create_link, name='create_link'),
 ]

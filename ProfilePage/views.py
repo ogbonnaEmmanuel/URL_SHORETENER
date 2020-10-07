@@ -7,6 +7,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import URLValidator
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
 from HomePage.models import Link
@@ -76,7 +77,7 @@ def create_link(request):
         else:
             create_unknown_user_link(url, alias)
         return JsonResponse({
-            'success': 'url created'
+            'created_alias': reverse('reverse_url', args=[alias])
         })
     else:
         return JsonResponse({

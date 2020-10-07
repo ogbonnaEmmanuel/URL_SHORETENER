@@ -22,3 +22,7 @@ def sign_up(request):
 def sign_out(request):
     logout(request)
     return redirect('home')
+
+
+def unique_url_reversal(request):
+    pass
